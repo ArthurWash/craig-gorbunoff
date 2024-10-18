@@ -3,13 +3,12 @@ body {
     padding: 0;
     padding-top: 56px;
     background-color: #222d52;
+    background-image: url(./Images/backgroundIdea1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: #FDFFFF;
-}
-
-h1 {
-    text-align: center;
-    font-size: 4rem;
-    margin-top: 2rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Nav Settings */
@@ -17,9 +16,36 @@ h1 {
     color: #FDFFFF;
 }
 
+.navbar-custom {background-color: black;}
+
 .nav-item:hover {
-    background-color: #E8E4E0;
+    background-color: #222d52;
     border-radius: 10px;
+}
+
+.nav-link:hover {
+    color: #D2B68A;
+}
+
+/* Header Settings */
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 2rem;
+}
+
+#period {color: #D2B68A;}
+
+/* Skills Section Settings */
+.skills-container {
+    /* background-color: rgba(44, 44, 44, 0.788); */
+    border-radius: 10px;
+    margin: 50px;
+    padding: 50px;
+}
+
+.icon {
+    width: 50px;
 }
 
 /* Demo Reel Settings */
