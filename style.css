@@ -62,8 +62,66 @@ h1 {
     left: 0;
 }
 
-.aspect-ratio-container {
+/* Production Page Settings */
+
+/* Main video player container */
+#main-video-container {
+    margin-bottom: 2rem;
+  }
+  
+  /* Aspect ratio container for videos */
+  .aspect-ratio-container {
     position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  .aspect-ratio-container iframe,
+  .aspect-ratio-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .video-thumbnail {
+    border-radius: 10px;
+  }
+  
+  /* Thumbnail hover effect */
+  .video-thumbnail:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Tooltip container */
+.video-thumbnail-container {
+  position: relative;
 }
+
+/* Tooltip styling */
+.video-thumbnail-container::after {
+    content: attr(data-title); /* Use the data-title attribute for the tooltip text */
+    position: absolute;
+    top: 5px; /* Position near the top of the thumbnail */
+    left: 5px; /* Position near the left of the thumbnail */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 10; /* Ensure the tooltip appears above other elements */
+  }
+  
+  /* Show tooltip on hover */
+  .video-thumbnail-container:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
