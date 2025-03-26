@@ -131,3 +131,41 @@ h2 {
     opacity: 1;
     visibility: visible;
   }
+
+  /* Contact Page Settings */
+/* Center the icons in the middle of the screen, stacked vertically */
+.contact-icons-container {
+  display: flex;
+  flex-direction: row; /* Stack icons vertically */
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Full viewport height */
+  gap: 125px; /* Space between icons */
+}
+
+/* Style the icons */
+.contact-icon {
+  font-size: 10rem;
+  color: #fff;
+  text-decoration: none; /* Remove underline */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for icons */
+.contact-icon:hover {
+  color: #D2B68A;
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-icon {
+    font-size: 8rem; /* Slightly smaller icons on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-icon {
+    font-size: 5rem; /* Smaller icons for very small screens */
+  }
+}
