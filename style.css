@@ -27,6 +27,49 @@ body {
     color: #D2B68A;
 }
 
+/* Forces the hamburger icon color to be visible (using your gold color) */
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23D2B68A' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* -------------------- DESKTOP-ONLY FIXES (min-width 992px) -------------------- */
+@media (min-width: 992px) {
+    /* Preserve original Centered Look on Desktop */
+    #navbarSupportedContent .navbar-nav:nth-child(1) {
+        /* This overrides the me-auto on desktop and centers the element */
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    /* Balances the centered links on desktop (matches toggler button size) */
+    .d-none.d-lg-block {
+        width: 48px; 
+        height: 38px;
+    }
+}
+/* -------------------- MOBILE-ONLY FIXES (max-width 991.98px) -------------------- */
+@media (max-width: 991.98px) {
+    /* Custom CSS to force social icons side-by-side in the mobile dropdown, aligned to the left */
+    .collapse .navbar-nav:last-child {
+        display: flex;
+        flex-direction: row;
+        /* Ensure there is no stray padding to cause misalignment */
+        padding-left: 0 !important; 
+    }
+    
+    /* Apply spacing to the right of the first icon only in mobile view */
+    .collapse .navbar-nav:last-child .nav-item:first-child {
+        margin-right: 15px !important;
+    }
+    
+    /* Ensure the second icon has no extra margin */
+    .collapse .navbar-nav:last-child .nav-item:last-child {
+        margin-right: 0 !important;
+    }
+}
+
+
+
 /* Header Settings */
 h1 {
     text-align: center;
