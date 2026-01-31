@@ -60,11 +60,81 @@
 </nav>
       <br><br>
 
-      <h1>Craig Gorbunoff<span id="period">.</span></h1>
+      <h1>Live Production Solutions Consultant<span id="period">.</span></h1>
+
+<div class="container my-5">
+  <div class="row align-items-center justify-content-center">
+    
+    <div class="col-12 col-lg-6 order-2 order-lg-1">
+      <div class="engineering-text px-lg-4">
+        <p>
+          As a Live Production Solutions Consultant, I partner with customers to simplify complex production workflows, reduce manual effort and operational friction, enable remote, cloud-based, and distributed production, and help teams get more value out of the tools they already use. 
+        </p>
+        <p>
+          This work often sits at the intersection of editorial, production, engineering, and digital teams, translating goals into workflows that are practical, scalable, and reliable.
+        </p>
+        <p>
+          I’ve worked across Sports, Entertainment, News, and Enterprise verticals to deliver streamlined solutions for live production and video on demand workflows with properties such as: 
+          <span style="color: #D2B68A; font-weight: 500;">
+            NBA, The Masters, The Met Gala, Democratic National Committee and more.
+          </span>
+        </p>
+        <p class="mt-4 italic-text">
+          You’ll find on this page some video examples of how this happens:
+        </p>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-5 mb-4 mb-lg-0 d-flex justify-content-center order-1 order-lg-2">
+      <img src="./images/Engineering Page/Action Shot 2.png" class="project-img rounded shadow" alt="Live Production Engineering">
+    </div>
+
+  </div>
+</div>
 
       <br><br>
 
- 
+            <div class="container" id="main-video-container">
+        <div class="aspect-ratio-container">
+          <iframe id="main-video" class="overview" src="https://www.youtube.com/embed/SsRsDi3pK84" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+        </div>
+      </div>
+
+<!-- Video Portfolio -->
+      <div class="container text-center header">
+        <div class="row justify-content-between">
+          <div class="col-12 col-md-4 my-4">
+            <div class="aspect-ratio-container video-thumbnail-container" data-title="Grabyo Proof of Concept - OHL Hockey">
+                <!-- 1 -->
+              <img class="video-thumbnail" src="https://img.youtube.com/vi/9M9gfgwkxQg/0.jpg" alt="Grabyo Proof of Concept - OHL Hockey" data-video="https://www.youtube.com/embed/9M9gfgwkxQg">
+            </div>            
+          </div>
+          
+          <div class="col-12 col-md-4 my-4">
+            <div class="aspect-ratio-container video-thumbnail-container" data-title="Grabyo Proof of Concept - Alt Casts">
+                <!-- 2 -->
+                <img class="video-thumbnail" src="https://img.youtube.com/vi/p3O_TQm3MUs/0.jpg" alt="Grabyo Proof of Concept - Alt Casts" data-video="https://www.youtube.com/embed/p3O_TQm3MUs">
+            </div>            
+          </div>          
+            
+          <div class="col-12 col-md-4 my-4">
+            <div class="aspect-ratio-container video-thumbnail-container" data-title="IBC 2025: Insights from the showfloor with Craig Gorbuoff, Senior Sales Engineer.">
+                <!-- 3 -->
+                <img class="video-thumbnail" src="https://img.youtube.com/vi/GxGNaS3umdE/0.jpg" alt="IBC 2025: Insights from the showfloor with Craig Gorbuoff, Senior Sales Engineer." data-video="https://www.youtube.com/embed/GxGNaS3umdE">
+            </div>             
+          </div>  
+        </div>
+
+        <div class="row justify-content-between">
+          <div class="col-12 col-md-4 my-4">
+            <div class="aspect-ratio-container video-thumbnail-container" data-title="Reinventing live production at AWS re:Invent | Grabyo & Tagboard">
+                <!-- 4 -->
+                <img class="video-thumbnail" src="https://img.youtube.com/vi/SsRsDi3pK84/0.jpg" alt="Reinventing live production at AWS re:Invent | Grabyo & Tagboard" data-video="https://www.youtube.com/embed/SsRsDi3pK84">
+            </div>            
+          </div>   
+        </div>
+
+ <br><br>
 
 <!-- Footer -->
 <div class="container footer-custom">
@@ -87,6 +157,35 @@
     </ul>
   </footer>
 </div>
+
+    <!-- Click on Thumbnail to scroll up to main video player to watch the video -->
+    <script>
+        // Select the main video player and all video thumbnails
+        const mainVideo = document.getElementById('main-video');
+        const thumbnails = document.querySelectorAll('.video-thumbnail');
+    
+        // Add click event listeners to all thumbnails
+        thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function () {
+            // Get the video URL from the data-video attribute
+            const videoUrl = this.getAttribute('data-video');
+    
+            // Update the main video player's src
+            mainVideo.src = videoUrl + '?autoplay=1&mute=1';
+    
+            // Scroll back to the main video player with a dynamic offset
+            const mainVideoContainer = document.getElementById('main-video-container');
+            const navbar = document.querySelector('.navbar'); // Select the fixed navbar
+            const offset = navbar ? navbar.offsetHeight + 20 : 20; // Add 20px spacing if navbar exists
+            const topPosition = mainVideoContainer.getBoundingClientRect().top + window.pageYOffset - offset;
+    
+            window.scrollTo({
+            top: topPosition,
+            behavior: 'smooth'
+            });
+        });
+        });
+    </script>
 
     <!-- Bootstrap JS -->
     <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

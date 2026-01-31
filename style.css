@@ -93,6 +93,49 @@ h2 {
     padding: 50px;
 }
 
+/* Text stays narrow for easy reading */
+.skills-container p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Photo container is allowed to be slightly wider (bigger) */
+.skills-container .row.mx-auto {
+  max-width: 500px;
+  width: 100%;
+}
+
+.skills-inner-container {
+  /* This prevents the two columns from spreading too far on wide screens */
+  max-width: 1500px; 
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Forces images to be uniform squares without stretching */
+.project-img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto; /* Ensures the image itself is centered */
+  border: 1px solid rgba(255,255,255,0.1); /* Adjusted for your dark background */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Subtle hover effect */
+.project-img:hover {
+  transform: scale(1.03);
+}
+
+/* Subtle hover effect for extra polish */
+.project-img:hover {
+  transform: scale(1.02);
+}
+
 .icon {
     width: 50px;
 }
@@ -175,15 +218,48 @@ h2 {
     visibility: visible;
   }
 
+  /* Engineering Page Settings */
+.engineering-text p {
+  text-align: left !important;
+  max-width: 100% !important;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Style for the bridge line */
+.italic-text {
+  font-style: italic;
+  opacity: 0.9;
+  color: #FDFFFF;
+}
+
+/* Mobile alignment and background box */
+@media (max-width: 991px) {
+  .engineering-text {
+    text-align: center !important;
+    background-color: rgba(44, 44, 44, 0.7); /* A slightly darker gray/blue looks great on your background */
+    padding: 30px;        /* Adds space inside the box so text doesn't touch the edges */
+    border-radius: 15px;  /* Rounds the corners of the box */
+    margin-top: 20px;     /* Space between the image above and this box */
+  }
+
+  /* Remove the background from the individual paragraphs */
+  .engineering-text p {
+    background-color: transparent !important;
+    margin-bottom: 1.5rem;
+  }
+}
+
   /* Contact Page Settings */
 /* Center the icons in the middle of the screen, stacked vertically */
 .contact-icons-container {
   display: flex;
-  flex-direction: row; /* Stack icons vertically */
+  flex-direction: row; 
   justify-content: center;
   align-items: center;
-  height: 50vh; /* Full viewport height */
-  gap: 125px; /* Space between icons */
+  height: 50vh; 
+  gap: 125px; /* The space between icons */
 }
 
 /* Style the icons */
@@ -210,5 +286,35 @@ h2 {
 @media (max-width: 480px) {
   .contact-icon {
     font-size: 5rem; /* Smaller icons for very small screens */
+  }
+}
+
+/* -------------------- SKILLS BREAKPOINT (865px) -------------------- */
+@media (min-width: 865px) {
+  .skills-inner-container > .row > .col {
+    flex: 0 0 auto;
+    width: 50%; /* Skills snap to 2-columns here */
+  }
+}
+
+/* -------------------- VIDEO BREAKPOINT (991px) -------------------- */
+@media (min-width: 991px) {
+  .custom-video-row > .col-12 {
+    flex: 0 0 auto;
+    width: 33.3333%; /* Videos snap to 3-columns here */
+  }
+}
+
+/* 2. Fix the "Switch" at 660px */
+@media (max-width: 660px) {
+  .contact-icons-container {
+    flex-direction: column; /* Stack them vertically when the screen is too narrow */
+    gap: 10px; /* Reduce gap so they don't fly off the screen */
+    height: auto; /* Allow the container to grow vertically */
+    margin-top: 40px;
+  }
+  
+  .contact-icon {
+    font-size: 6rem !important; /* Make icons a bit smaller for mobile */
   }
 }
