@@ -89,43 +89,61 @@ h2 {
 
 /* Skills Section Settings */
 .skills-container {
-  /* background-color: rgba(44, 44, 44, 0.788); */
   border-radius: 10px;
   margin: 50px;
   padding: 50px;
 }
 
-/* Text stays narrow for easy reading */
-.skills-container p {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* 1. Wrap the Desktop limits in a Media Query so they don't crush Mobile */
+@media (min-width: 992px) {
+  .skills-container p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-/* Photo container is allowed to be slightly wider (bigger) */
-.skills-container .row.mx-auto {
-  max-width: 500px;
-  width: 100%;
+  .skills-container .row.mx-auto {
+    max-width: 500px;
+    width: 100%;
+  }
 }
 
 .skills-inner-container {
-  /* This prevents the two columns from spreading too far on wide screens */
   max-width: 1500px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Forces images to be uniform squares without stretching */
+/* 2. Fix the image "squeeze" globally */
 .project-img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   width: 100%;
-  max-width: 400px;
+  max-width: 400px; /* This is fine for desktop */
   display: block;
-  margin: 0 auto; /* Ensures the image itself is centered */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Adjusted for your dark background */
+  margin: 0 auto; 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
   transition: transform 0.2s ease-in-out;
+}
+
+/* 3. Force images to be full-width on Mobile */
+@media (max-width: 991px) {
+  .project-img {
+    max-width: 100% !important; 
+    width: 100% !important;
+  }
+  
+  /* This removes the 50px margins on the sides of the homepage on mobile */
+  .skills-container {
+    margin: 20px 10px !important;
+    padding: 20px 10px !important;
+  }
+
+  /* Adds spacing between the second skill section and the demo reel on mobile */
+  .skills-container .row-cols-1 > .col:last-child {
+    margin-bottom: 50px !important;
+  }
 }
 
 /* Subtle hover effect */
@@ -330,4 +348,23 @@ h2 {
   .contact-icon {
     font-size: 6rem !important; /* Make icons a bit smaller for mobile */
   }
+}
+
+/* This allows us to center the box ONLY when we want to */
+.center-box {
+  text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-box p {
+  text-align: center !important;
+}
+
+/* Ensure Engineering page stays Left Aligned */
+.engineering-text p {
+  text-align: left;
 }
