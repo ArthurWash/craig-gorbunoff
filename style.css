@@ -1,96 +1,98 @@
 body {
-    margin: 0;
-    padding: 0;
-    padding-top: 56px;
-    background-color: #222d52;
-    background-image: url(./Images/backgroundIdea1.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #FDFFFF;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 56px;
+  background-color: #222d52;
+  background-image: url(./Images/backgroundIdea1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fdffff;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Nav Settings */
 .nav-link {
-    color: #FDFFFF;
+  color: #fdffff;
 }
 
-.navbar-custom {background-color: black;}
+.navbar-custom {
+  background-color: black;
+}
 
 .nav-item:hover {
-    background-color: #222d52;
-    border-radius: 10px;
+  background-color: #222d52;
+  border-radius: 10px;
 }
 
 .nav-link:hover {
-    color: #D2B68A;
+  color: #d2b68a;
 }
 
 /* Forces the hamburger icon color to be visible (using your gold color) */
 .navbar-custom .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23D2B68A' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23D2B68A' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 /* -------------------- DESKTOP-ONLY FIXES (min-width 992px) -------------------- */
 @media (min-width: 992px) {
-    /* Preserve original Centered Look on Desktop */
-    #navbarSupportedContent .navbar-nav:nth-child(1) {
-        /* This overrides the me-auto on desktop and centers the element */
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    
-    /* Balances the centered links on desktop (matches toggler button size) */
-    .d-none.d-lg-block {
-        width: 48px; 
-        height: 38px;
-    }
+  /* Preserve original Centered Look on Desktop */
+  #navbarSupportedContent .navbar-nav:nth-child(1) {
+    /* This overrides the me-auto on desktop and centers the element */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Balances the centered links on desktop (matches toggler button size) */
+  .d-none.d-lg-block {
+    width: 48px;
+    height: 38px;
+  }
 }
 /* -------------------- MOBILE-ONLY FIXES (max-width 991.98px) -------------------- */
 @media (max-width: 991.98px) {
-    /* Custom CSS to force social icons side-by-side in the mobile dropdown, aligned to the left */
-    .collapse .navbar-nav:last-child {
-        display: flex;
-        flex-direction: row;
-        /* Ensure there is no stray padding to cause misalignment */
-        padding-left: 0 !important; 
-    }
-    
-    /* Apply spacing to the right of the first icon only in mobile view */
-    .collapse .navbar-nav:last-child .nav-item:first-child {
-        margin-right: 15px !important;
-    }
-    
-    /* Ensure the second icon has no extra margin */
-    .collapse .navbar-nav:last-child .nav-item:last-child {
-        margin-right: 0 !important;
-    }
+  /* Custom CSS to force social icons side-by-side in the mobile dropdown, aligned to the left */
+  .collapse .navbar-nav:last-child {
+    display: flex;
+    flex-direction: row;
+    /* Ensure there is no stray padding to cause misalignment */
+    padding-left: 0 !important;
+  }
+
+  /* Apply spacing to the right of the first icon only in mobile view */
+  .collapse .navbar-nav:last-child .nav-item:first-child {
+    margin-right: 15px !important;
+  }
+
+  /* Ensure the second icon has no extra margin */
+  .collapse .navbar-nav:last-child .nav-item:last-child {
+    margin-right: 0 !important;
+  }
 }
-
-
 
 /* Header Settings */
 h1 {
-    text-align: center;
-    font-size: 4rem;
-    margin-top: 2rem;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 2rem;
 }
 
 h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
 }
 
-#period {color: #D2B68A;}
+#period {
+  color: #d2b68a;
+}
 
 /* Skills Section Settings */
 .skills-container {
-    /* background-color: rgba(44, 44, 44, 0.788); */
-    border-radius: 10px;
-    margin: 50px;
-    padding: 50px;
+  /* background-color: rgba(44, 44, 44, 0.788); */
+  border-radius: 10px;
+  margin: 50px;
+  padding: 50px;
 }
 
 /* Text stays narrow for easy reading */
@@ -108,7 +110,7 @@ h2 {
 
 .skills-inner-container {
   /* This prevents the two columns from spreading too far on wide screens */
-  max-width: 1500px; 
+  max-width: 1500px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -122,7 +124,7 @@ h2 {
   max-width: 400px;
   display: block;
   margin: 0 auto; /* Ensures the image itself is centered */
-  border: 1px solid rgba(255,255,255,0.1); /* Adjusted for your dark background */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Adjusted for your dark background */
   transition: transform 0.2s ease-in-out;
 }
 
@@ -137,88 +139,92 @@ h2 {
 }
 
 .icon {
-    width: 50px;
+  width: 50px;
 }
 
 /* Demo Reel Settings */
 #demo-reel {
-    margin-top: 25px;
-    margin-bottom: 75px;
+  margin-top: 25px;
+  margin-bottom: 75px;
 }
 
 .overview {
-    position: absolute;
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    left: 0;
+  position: absolute;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  left: 0;
 }
 
 /* Production Page Settings */
 
 /* Main video player container */
 #main-video-container {
-    margin-bottom: 2rem;
-  }
-  
-  /* Aspect ratio container for videos */
-  .aspect-ratio-container {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-  }
-  
-  .aspect-ratio-container iframe,
-  .aspect-ratio-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-  }
+  margin-bottom: 2rem;
+}
 
-  .video-thumbnail {
-    border-radius: 10px;
-  }
-  
-  /* Thumbnail hover effect */
-  .video-thumbnail:hover {
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-  }
+/* Aspect ratio container for videos */
+.aspect-ratio-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
 
-  /* Tooltip container */
+.aspect-ratio-container iframe,
+.aspect-ratio-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.video-thumbnail {
+  border-radius: 10px;
+}
+
+/* Thumbnail hover effect */
+.video-thumbnail:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Tooltip container */
 .video-thumbnail-container {
   position: relative;
 }
 
 /* Tooltip styling */
 .video-thumbnail-container::after {
-    content: attr(data-title); /* Use the data-title attribute for the tooltip text */
-    position: absolute;
-    top: 5px; /* Position near the top of the thumbnail */
-    left: 5px; /* Position near the left of the thumbnail */
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-    z-index: 10; /* Ensure the tooltip appears above other elements */
-  }
-  
-  /* Show tooltip on hover */
-  .video-thumbnail-container:hover::after {
-    opacity: 1;
-    visibility: visible;
-  }
+  content: attr(
+    data-title
+  ); /* Use the data-title attribute for the tooltip text */
+  position: absolute;
+  top: 5px; /* Position near the top of the thumbnail */
+  left: 5px; /* Position near the left of the thumbnail */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+  z-index: 10; /* Ensure the tooltip appears above other elements */
+}
 
-  /* Engineering Page Settings */
+/* Show tooltip on hover */
+.video-thumbnail-container:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Engineering Page Settings */
 .engineering-text p {
   text-align: left !important;
   max-width: 100% !important;
@@ -231,17 +237,22 @@ h2 {
 .italic-text {
   font-style: italic;
   opacity: 0.9;
-  color: #FDFFFF;
+  color: #fdffff;
 }
 
 /* Mobile alignment and background box */
 @media (max-width: 991px) {
   .engineering-text {
     text-align: center !important;
-    background-color: rgba(44, 44, 44, 0.7); /* A slightly darker gray/blue looks great on your background */
-    padding: 30px;        /* Adds space inside the box so text doesn't touch the edges */
-    border-radius: 15px;  /* Rounds the corners of the box */
-    margin-top: 20px;     /* Space between the image above and this box */
+    background-color: rgba(
+      44,
+      44,
+      44,
+      0.7
+    ); /* A slightly darker gray/blue looks great on your background */
+    padding: 30px; /* Adds space inside the box so text doesn't touch the edges */
+    border-radius: 15px; /* Rounds the corners of the box */
+    margin-top: 20px; /* Space between the image above and this box */
   }
 
   /* Remove the background from the individual paragraphs */
@@ -251,14 +262,14 @@ h2 {
   }
 }
 
-  /* Contact Page Settings */
+/* Contact Page Settings */
 /* Center the icons in the middle of the screen, stacked vertically */
 .contact-icons-container {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 50vh; 
+  height: 50vh;
   gap: 125px; /* The space between icons */
 }
 
@@ -267,12 +278,14 @@ h2 {
   font-size: 10rem;
   color: #fff;
   text-decoration: none; /* Remove underline */
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease; /* Smooth hover effect */
 }
 
 /* Hover effect for icons */
 .contact-icon:hover {
-  color: #D2B68A;
+  color: #d2b68a;
   transform: scale(1.2); /* Slightly enlarge on hover */
 }
 
@@ -313,7 +326,7 @@ h2 {
     height: auto; /* Allow the container to grow vertically */
     margin-top: 40px;
   }
-  
+
   .contact-icon {
     font-size: 6rem !important; /* Make icons a bit smaller for mobile */
   }
